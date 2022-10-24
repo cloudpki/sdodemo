@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out pull request
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           # Critical: check out the head commit on the branch. By default,
           # actions/checkout will check out a merge commit built for the pull
