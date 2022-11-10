@@ -1,3 +1,3 @@
 # sdodemo
 Demo SDO
-Welcome to cloudpki organization
+Nov 10: Regu: Welcome to cloudpki organization
