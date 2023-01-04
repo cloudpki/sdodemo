@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Authorize with Beyond Identity
         id: signature-verification
-        uses: gobeyondidentity/auth-commit-sig@v1
+        uses: gobeyondidentity/auth-commit-sig@v1.0.0-rc10
         with:
           # API Token to call Beyond Identity cloud.
           # The token should be stored as an actions secret or fetched from a secrets manager.
