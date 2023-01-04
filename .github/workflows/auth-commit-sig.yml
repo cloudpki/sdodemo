@@ -1,6 +1,6 @@
 name: Authorize Commit Signing
 
-on:[push]
+on: [push]
 
 jobs:
   auth-commit-sig:
