@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - name: Authorize with Beyond Identity
         id: signature-verification
-        uses: gobeyondidentity/auth-commit-sig@v1.0.0-rc10
+        uses: gobeyondidentity/auth-commit-sig@v1.0.0-rc21
         with:
           # API Token to call Beyond Identity cloud.
           # The token should be stored as an actions secret or fetched from a secrets manager.
@@ -28,3 +28,10 @@ jobs:
           repository: "cloudpki/sdodemo"
           #allowlist_config_file_path: "./allow_list/allowlist_example.yml"
         # Echo outcome JSON to standard out.
+        # Outcome can be used in other steps as ${{ steps.signature-verification.outputs.outcome }}.
+      - name: Print outcome
+        run: |
+           echo '${{ steps.signature-verification.outputs.outcome }}' 
+    # Output of job. Can be accessed in other jobs as ${{ needs.auth-commit-sig.outputs.outcome }}.
+    outputs:
+      outcome: ${{ steps.signature-verification.outputs.outcome }}
