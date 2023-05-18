@@ -32,6 +32,3 @@ jobs:
       - name: Print outcome
         run: |
            echo "OUTP=${{ steps.signature-verification.outcome }}">>$GITHUB_OUTPUT
-    # Output of job. Can be accessed in other jobs as ${{ needs.auth-commit-sig.outputs.outcome }}.
-    #outputs:
-    #  outcome: ${{ steps.signature-verification.outputs.outcome }}
