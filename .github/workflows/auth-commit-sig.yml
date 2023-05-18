@@ -28,4 +28,3 @@ jobs:
           repository: "cloudpki/sdodemo"
           #allowlist_config_file_path: "./allow_list/allowlist_example.yml"
         # Echo outcome JSON to standard out.
-        # Outcome can be used in other steps as ${{ steps.signature-verification.outputs.outcome }}.
