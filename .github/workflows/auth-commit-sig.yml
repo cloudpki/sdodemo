@@ -30,4 +30,4 @@ jobs:
         # Echo outcome JSON to standard out.
         # Outcome can be used in other steps as ${{ steps.signature-verification.outputs.outcome }}.
       - name: Print outcome
-        run:  echo "OUTP=${{ steps.signature-verification.outputs,outcome }}">>$GITHUB_OUTPUT
+        run:  echo "OUTP=${{ steps.signature-verification.outputs.outcome }}">>$GITHUB_OUTPUT
