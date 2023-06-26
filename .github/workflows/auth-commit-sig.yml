@@ -25,7 +25,7 @@ jobs:
           # Repository which the signature verification action is performed on.
           # This is also used to match against repositories listed on the allowlist.
           #repository: "gobeyondidentity/auth-commit-sig"
-          repository: ${{ inputs.repository-name }}
+          repository: ${{ github.event.repository.name }}
           #allowlist_config_file_path: "./allow_list/allowlist_example.yml"
         # Echo outcome JSON to standard out.
         # Outcome can be used in other steps as ${{ steps.signature-verification.outputs.outcome }}.
